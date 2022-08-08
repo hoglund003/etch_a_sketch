@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.x {
+    display: flex;
+}
+
+.y {
+    height: 5px;
+    width: 5px;
+    background-color: blue;
+}
+
+.y:hover {
+    background-color: green;
+}
