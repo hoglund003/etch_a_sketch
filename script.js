@@ -2,6 +2,8 @@ const container = document.querySelector(".container");
 const button = document.querySelector(".btn.change");
 
 function renderFrame(length_x, length_y) {
+    container.innerHTML = "";
+
     for (let x = 0; x < length_x; x++) {
         var x_div = document.createElement("div");
         x_div.setAttribute("class", `x ${x.toString()}`);
