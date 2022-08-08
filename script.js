@@ -13,6 +13,14 @@ function renderFrame(length_x, length_y) {
             x_div.appendChild(y_div);
         }
     }
+
+    var y_divs = document.querySelectorAll(".y");
+    for (let i = 0; i < y_divs.length; i++) {
+        y_divs[i].addEventListener("mouseover", () => {
+            y_divs[i].style.backgroundColor = "red";
+        });
+        
+    }
 }
 
 button.addEventListener("click", function(e) {
