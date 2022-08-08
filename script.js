@@ -1,15 +1,15 @@
 const container = document.querySelector(".container");
 const button = document.querySelector(".btn.change");
 
-function renderFrame(length_x, length_y) {
+function renderFrame(size) {
     container.innerHTML = "";
 
-    for (let x = 0; x < length_x; x++) {
+    for (let x = 0; x < size; x++) {
         var x_div = document.createElement("div");
         x_div.setAttribute("class", `x ${x.toString()}`);
         container.appendChild(x_div);
     
-        for (let y = 0; y < length_y; y++) {
+        for (let y = 0; y < size; y++) {
             var y_div = document.createElement("div");
             y_div.setAttribute("class", `y ${y.toString()}`);
             x_div.appendChild(y_div);
@@ -26,23 +26,16 @@ function renderFrame(length_x, length_y) {
 }
 
 button.addEventListener("click", function(e) {
-    var length_x = prompt("Length x:");
-    var length_y = prompt("Length y:");
+    var size = prompt("Size: ");
 
-    if (length_x >= 100) {
-        length_x = 100;
+    if (size > 100) {
+        size = 100;
     }
-    if (length_y >= 100) {
-        length_y = 100;
-    }
-    if (length_x < 1) {
-        length_x = 1;
-    }
-    if (length_y < 1) {
-        length_y = 1;
+    if (size < 1) {
+        size = 1;
     }
 
-    renderFrame(length_x, length_y);
+    renderFrame(size);
 });
 
-renderFrame(80, 80);
+renderFrame(80);
